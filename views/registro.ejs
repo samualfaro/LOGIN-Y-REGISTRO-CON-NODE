@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- ===== CSS ===== -->
+        <link rel="stylesheet" href="resources/css/styles.css">
+
+        <!-- ===== BOX ICONS ===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+        <title>REGISTRO DE NUEVO USUARIO</title>  
+    </head>
+    <body>
+        <div class="l-form">
+            <div class="shape1"></div>
+            <div class="shape2"></div>
+
+            <div class="form">
+                <img src="resources/img/authentication.svg" alt="" class="form__img">
+
+                <form action="registrar" class="form__content" method="post">
+                    <h1 class="form__title">Hola! Regístrate para comenzar</h1>
+
+                   
+                    <div class="form__div form__div-one">
+                        <div class="form__icon">
+                            <i class='bx bx-user-circle'></i>
+
+                        </div>
+
+                        <div class="form__div-input">
+                            <label for="" class="form__label">Crea un usuario</label>
+                            <input type="text" class="form__input" name="usuario" required>
+                        </div>
+                    </div>
+                    <div class="form__div form__div-one">
+                        <div class="form__icon">
+                            <i class='bx bx-envelope'></i>
+                        </div>
+
+                        <div class="form__div-input">
+                            <label for="" class="form__label">Correo electrónico</label>
+                            <input type="text" class="form__input" name="correoe" required>
+                        </div>
+                    </div>
+
+                    <div class="form__div">
+                        <div class="form__icon">
+                            <i class='bx bx-lock' ></i>
+                        </div>
+
+                        <div class="form__div-input">
+                            <label for="" class="form__label">Crea una contraseña</label>
+                            <input type="password" class="form__input" name="passw" required> 
+                        </div>
+                    </div>
+                    
+                    <a href="login" class="form__forgot">Ya tengo una cuenta creada</a>
+                    <input type="submit" class="form__button" value="Registrar">
+
+                   
+                </form>
+            </div>
+
+        </div>
+        
+        <!-- ===== MAIN JS ===== -->
+        <script src="resources/js/main.js"></script>
+
+        <!--SWEETALERT2-->
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+        <!--COMPROBACIÓN-->
+        <% if(typeof alert != "undefined") {  %>
+            <script>
+                Swal.fire({
+                    title: '<%= alertTitle %>',
+                    text: '<%= alertMessage %>',
+                    icon: '<%= alertIcon %>',
+                    showConfirmButton: <%= showConfirmButton %>,
+                    timer: <%= timer %>
+                }).then(()=>{
+                    window.location='/ <%= ruta %>'
+                })
+            </script>
+        <% } %>
+    </body>
+</html>

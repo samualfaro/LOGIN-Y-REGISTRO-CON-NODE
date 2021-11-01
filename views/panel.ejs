@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CRUD PHP</title>
+
+    <!--ESTILOS CSS BOOTSTRAP-->
+    <link rel="stylesheet" href="resources/css/bootstrap.min.css">
+    <!--ESTILOS CSS ICONOS FONTAWESOME-->
+    <link rel="stylesheet" href="resources/css/all.min.css">
+    <!--ESTILOS Sweet Alert-->
+    <link rel="stylesheet" href="resources/plugins/SweetAlert/dist/sweetalert2.min.css">
+
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+
+
+</head>
+
+<body>
+
+
+    <div class="container">
+
+        <div class="card">
+            <div class="card-header bg-info">
+                
+                <h1>BIENVENIDO</h1>
+            
+                
+            </div>
+            <div class="card-body">
+                <input type="hidden" name="idPersona" id="idPersona">
+
+                <div class="row">
+                    <div class="btn-group-sm">
+                        <button class="btn btn-outline-info" onclick="Consultar();"><span class="fa fa-search"></span> Consultar</button>
+                        <button class="btn btn-outline-info" id="guardar" onclick="Guardar();"><span class="fa fa-save"></span> Guardar</button>
+                        <button class="btn btn-outline-info" id="modificar" onclick="Modificar();" disabled="true"><span class="fa fa-pencil-alt"></span> Modificar</button>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="usuario">Nombre de Usuario:</label>
+                        <input type="text" name="usuario" id="usuario" placeholder="Digite su nombre de usuario" class="form-control" autofocus>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="correo">Correo electrónico:</label>
+                        <input type="text" name="correo" id="correo" placeholder="Digite su correo electrónico" class="form-control">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="rol">Rol:</label>
+                        <input type="text" name="rol" id="rol" placeholder="Asigne un rol" class="form-control" autofocus>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="pass">Contraseña:</label>
+                        <input type="text" name="pass" id="pass" placeholder="Por favor digite su contraseña" class="form-control">
+                    </div>
+                </div>
+                
+            </div>
+            <div class="card-footer">
+                <table class="table table-striped" id="tablaPersona">
+                    <thead>
+                        <tr>
+                            <th>Usuario</th>
+                            <th>Correo electrónico</th>
+                            <th>Rol</th>
+                            <th>Contraseña</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody id="datos">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+<!-- JAVASCRIPT -->
+<script src="resources/js/all.min.js"></script>
+<script src="resources/js/bootstrap.min.js"></script>
+<script src="resources/js/jquery.js"></script>
+<script src="//cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+<script src="resources/js/persona.js"></script>
+<script src="resources/plugins/SweetAlert/dist/sweetalert2.all.min.js"></script>
+<script src="./app.js"></script>
+
+</html>
